@@ -49,7 +49,7 @@ defmodule Crc16 do
 
   @doc """
   Calculates 16-bit CRC for given package.
-  If package contains 16 bit CRC as its tail, returns 0x0000
+  If package contains 16-bit CRC as its tail, returns 0x0000
   in case of package is error free.
   """
   def handle_call({:get_crc, package}, _from, crc_lookup_table) do

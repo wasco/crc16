@@ -1,21 +1,11 @@
 # Crc16
 
-**TODO: Add description**
+  Brings result of CRC calculation.
 
-## Installation
+  Polynom: CRC-16-CCITT (x^16 + x^12 + x^5 + 1) or 0x1021.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `crc16` to your list of dependencies in `mix.exs`:
+  Calculates 16-bit CRC for given package.
 
-```elixir
-def deps do
-  [
-    {:crc16, "~> 0.1.0"}
-  ]
-end
-```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/crc16](https://hexdocs.pm/crc16).
-
+  If package contains 16-bit CRC as its tail, returns 0x0000
+  in case of package is error free.

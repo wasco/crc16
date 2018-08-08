@@ -20,11 +20,11 @@ defmodule Crc16 do
 
   @spec get_crc([byte]) :: integer
   def get_crc(package) do
-    GenServer.call(:crc_handler, {:get_crc, package})
+    GenServer.call(__MODULE__, {:get_crc, package})
   end
 
   def help() do
-    GenServer.call(:crc_handler, :help)
+    GenServer.call(__MODULE__, :help)
   end
 
 
